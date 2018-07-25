@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "testando_2"
+    },
+    {
+      "id": 2,
+      "title": "testando_2"
+    },
+    {
+      "id": 3,
+      "title": "testando_2"
+    },
+    {
+      "id": 4,
+      "title": "testando_2"
+    },
+    {
+      "id": 5,
+      "title": "testando_2"
+    },
+    {
+      "id": 6,
+      "title": "testando_2"
+    }
+  ],
+  "user": {
+    "name": "Ricardo"
+  }
+}

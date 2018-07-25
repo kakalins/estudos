@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <!-- Digite um nome:
+    <input type="text" id="texto">
+    <br> -->
+    <button id="add" ng-click="insert()">Adicionar</button>
+    <p>O nome digitado foi: {{ content }}</p>
+  </div>
+</body>
+
+<!-- <script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function ($scope, $http) {
+    $scope.insert = function () {
+      $http.get("http://localhost:8080/ricardo")
+        .then(function (response) {
+            $scope.content = response.data.records[0];
+        },  function(response) {
+              $scope.content = "Something went wrong";
+        });
+    }
+  });
+</script> -->
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function ($scope, $http) {
+    $scope.insert = function () {
+      $http.post("http://localhost:8080/ricardo/?title=testando_2")
+        .then(function (response) {
+            $scope.content = response.data;
+        },  function(response) {
+              $scope.content = "Something went wrong";
+        });
+    }
+  });
+</script>
+
+</html>
